@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Contact</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
@@ -9,18 +9,18 @@
         <div class="nav-left">
             <ul>
                 <li>
-                    <img src="images/logo.png" alt="dumbways_logo" />
+                    <img src="assets/images/logo.png" alt="dumbways_logo" />
                 </li>
                 <li>
                     <a class="navbar-home" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">My Project</a>
+                    <a href="myProject.html">My Project</a>
                 </li>
             </ul>
         </div>
         <div class="nav-right">
-            <a href="contact.html">Contact me</a>
+            <a href="#">Contact me</a>
         </div>
     </nav>
     
@@ -33,7 +33,7 @@
             </div>
             <div>
                 <label for="Email-input">Email</label>
-                <input id="Email-input" type="email" required>
+                <input id="Email-input" type="email" name="email" required>
             </div>
             <div>
                 <label for="Phone-input">Phone Number</label>
@@ -45,7 +45,7 @@
                     <option value="" hidden >select</option>
                     <option>Frontend</option>
                     <option>Backend</option>
-                    <option>Fullstask</option>
+                    <option>Fullstask</option> 
                 </select>
             </div>
             <div>
@@ -55,7 +55,7 @@
         </form>
             <button class="button-submit" onclick="submitData()">Submit</button>
     </div>
-    <script src="contact.js"></script>
+    <script src="js/contact.js"></script>
 
     </body>
 </html>

@@ -33,7 +33,7 @@ nav ul li a {
     color: black;
 }
 
-nav ul li .navbar-home {
+nav ul li .active {
     font-weight: bold;
 }
 
@@ -111,7 +111,7 @@ a {
 }
 
 
-section {
+.indexSection {
     display: flex;
     width: 80%;
 }
