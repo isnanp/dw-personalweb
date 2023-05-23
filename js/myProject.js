@@ -29,6 +29,7 @@
                 let date2 = new Date(document.getElementById("date2").value); 
                 let diff = new Date(date2) - new Date(date1);
                 let days = Math.floor(diff / (1000 * 3600 * 24));
+                let weeks = Math.floor(diff / (1000 * 3600 * 24 * 7))
                 let months = Math.floor(diff / (1000 * 3600 * 24 * 30)); 
                 let years = Math.floor(diff / (1000 * 3600 * 24 * 30 * 12));  
  
@@ -38,8 +39,12 @@
                     return `${years} years`  
                 } else if ( months == 1) {
                     return `${months} month`
-                }else if (months > 0) {
+                } else if (months > 0) {
                     return `${months} months`
+                } else if (weeks == 1) {
+                    return `${weeks} week`
+                } else if (weeks > 0) {
+                    return `${weeks} weeks`
                 } else if (days == 1) {
                     return `${days} day` 
                 } else if (days > 0) { 
