@@ -68,6 +68,10 @@ nav ul li .active {
     padding-right: 30%;
 }
 
+.container-left p {
+    text-align: justify;
+}
+
 .contact-button {
     background-color: black;
     color: white;

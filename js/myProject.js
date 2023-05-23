@@ -19,17 +19,35 @@
     let dataProject = [];
 
     function addProject(event) {
-        event.preventDefault();
-                let projectName = document.getElementById("inputProject").value;
+            event.preventDefault();
+            let projectName = document.getElementById("inputProject").value;
+            let desc = document.getElementById("desc").value;
+            let images = document.getElementById("inputImg").files;
+            
+            function timeDistance() {
                 let date1 = new Date(document.getElementById("date1").value);
-                let date2 = new Date(document.getElementById("date2").value);
-                let desc = document.getElementById("desc").value;
-                let images = document.getElementById("inputImg").files;
+                let date2 = new Date(document.getElementById("date2").value); 
+                let diff = new Date(date2) - new Date(date1);
+                let days = Math.floor(diff / (1000 * 3600 * 24));
+                let months = Math.floor(diff / (1000 * 3600 * 24 * 30)); 
+                let years = Math.floor(diff / (1000 * 3600 * 24 * 30 * 12));  
+ 
+                if (years == 1) {
+                    return `${years} year`
+                } else if (years > 0) {
+                    return `${years} years`  
+                } else if ( months == 1) {
+                    return `${months} month`
+                }else if (months > 0) {
+                    return `${months} months`
+                } else if (days == 1) {
+                    return `${days} day` 
+                } else if (days > 0) { 
+                    return `${days} days`
+                }
+            }
 
-            let diff;
-            diff = new Date(date2 - date1);
-            let months = diff.getMonth();
-            let days = diff.getDate();
+            let difference = timeDistance()
 
             const nodeIcon = `<i class="fa-brands fa-node-js"></i>`;
             const goIcon = `<i class="fa-brands fa-golang"></i>`;
@@ -46,15 +64,13 @@
 
             let projectPreview = { 
                 projectName,
-                months,
-                days,
+                difference,
                 desc, 
                 nodeDet,
                 GoDet,
                 reactDet,
                 javaDet,
                 images,
-
             };
 
             dataProject.push(projectPreview);
@@ -69,25 +85,24 @@
             document.getElementById("contents").innerHTML += `
             
              <div class="item-grid">
-                        <img src="${dataProject[i].images}" alt="gambarblok">
-                        <h3>${dataProject[i].projectName}</h3>
-                        <h5>durasi : ${dataProject[i].months} bulan, ${dataProject[i].days} hari</h5>
-                            <div class="previewInfo">
-                            <p>${dataProject[i].desc}</p>
-                            <div class="previewTech">
-                                ${dataProject[i].nodeDet}
-                                ${dataProject[i].GoDet} 
-                                ${dataProject[i].reactDet}
-                                ${dataProject[i].javaDet}
-                            </div>
-                                <div class="itemBtn">
-                                    <button>edit</button>
-                                    <button>delete</button>
-                                </div>
-                            </div>
+                <img src="${dataProject[i].images}" alt="gambarblok">
+                <h3>${dataProject[i].projectName}</h3>
+                <h5>durasi : ${dataProject[i].difference} </h5>
+                    <div class="previewInfo">
+                    <p>${dataProject[i].desc}</p>
+                    <div class="previewTech">
+                        ${dataProject[i].nodeDet} 
+                        ${dataProject[i].GoDet} 
+                        ${dataProject[i].reactDet}
+                        ${dataProject[i].javaDet}
                     </div>
-
-            
+                        <div class="itemBtn">
+                            <button>edit</button>
+                            <button>delete</button>
+                        </div>
+                    </div>
+            </div>
             `
         }
     }
+
