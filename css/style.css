@@ -54,6 +54,53 @@ nav ul li .active {
     border-radius: 10px;
 }
 
+.barsmenu {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;
+    display: none;
+    margin-right: 0.5em;
+    font-size: 1.1em;
+}
+
+.hamburger-container {
+    display: flex; 
+    list-style-type: none;
+    flex-direction: column;
+    background-color: #9a9a9a;
+    display: none;
+    padding-bottom: 0.5em;
+}
+
+.hamburger-container a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55em;
+}
+
+.hamburger-active {
+    font-weight: 700;
+}
+
+.hamburger-contact {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    height: 2.3em;
+    border-radius: 10px;
+}
+
+.hamburger-contact a {
+    padding: 0.2em;
+}
+
+
 .container {
     display: flex;
     margin: 5%;
@@ -64,13 +111,10 @@ nav ul li .active {
 }
 
 .container-left {
-    padding: 5%;
-    padding-right: 30%;
-}
-
-.container-left p {
+    flex: 1;
     text-align: justify;
 }
+
 
 .contact-button {
     background-color: black;
@@ -84,12 +128,15 @@ nav ul li .active {
 .contact {
     margin: 30px 0;
     display: flex;
-    justify-content:space-between;
     width: 90%; 
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 400;
 }
 
 .contact2 {
     display: flex;
+    margin-right: 2em;
 }
 a {
     color: black;
@@ -101,7 +148,7 @@ a {
 }
 
 .container-right {
-    flex: 60%;
+    flex: 1;
 }
 
 .card {
@@ -112,25 +159,39 @@ a {
     border-radius: 10px;
     text-align: center;
     padding-bottom: 3px;
+    line-height: 0.3em;
 }
 
+.card img {
+    width: 20em;
+    height: 23em;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
 
 .indexSection {
     display: flex;
     width: 80%;
+    align-items: center;
+}
+
+.sosmed {
+    text-align: center;
 }
 
 .sosmed i {
-    font-size: 50px;
-    margin-right: 28px;
+    font-size: 3rem;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
     color: black;
 }
 
 /*    =Contact Css=     */
 
-.contactform {
-    margin: 50px auto;
+.contactform { 
+    margin: 3em auto;
     width: 30%;
+    padding-bottom: 3em;
 }
 
 .contactform h1 {
@@ -164,7 +225,7 @@ textarea {
         padding: 6px 25px;
         border: none;
         border-radius: 10px;
-        margin-left: 77%;
+        float: right;
         font-size: 15px;
         cursor: pointer;
         box-shadow: 0 0 15px #9f9f9f;
@@ -172,4 +233,38 @@ textarea {
 
 .button-submit:hover{
     background-color: #565656;
+}
+
+@media only screen and (max-width: 900px) {
+    .indexSection {
+        width: 90%; 
+        flex-direction: column;
+        padding: 1em 1em;
+    }
+
+    .container-left {
+        width: 100%;
+        flex: 1;
+    }
+
+    .container-right img {
+        width: 13em;
+        height: 14em;
+        
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .item-collapse {
+        display: none;
+    }
+
+    .barsmenu {
+        display: block; 
+    }
+
+    .contactform {
+        width: 85%;
+    }
+
 }

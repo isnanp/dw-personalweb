@@ -16,18 +16,27 @@
                     <li>
                         <img src="assets/images/logo.png" alt="dumbways_logo"/>
                     </li>
-                    <li>
+                    <li class="item-collapse">
                         <a class="active" href="#">Home</a>
                     </li>
-                    <li>
+                    <li class="item-collapse">
                         <a href="myProject.html">My Project</a>
                     </li>
                 </ul>
             </div>
-            <div class="nav-right">
+            <div class="nav-right item-collapse">
                 <a href="contact.html">Contact me</a>
             </div>
+            <button type="button" class="barsmenu" onclick="openHam()"><i class="fa-2x fa-solid fa-bars"></i></button>
         </nav>
+
+        <div class="hamburger-container" id="hamburger-container">
+            <a href="#" class="hamburger-active">Home</a> 
+            <a href="myProject.html">My Project</a>
+            <div class="hamburger-contact">
+            <a href="contact.html">Contact me</a>
+            </div>
+        </div>
 
         <div class="container">
             <section class="indexSection">
@@ -38,9 +47,7 @@
                                 quia quasi ipsa minus quos, odit voluptatum totam perspiciatis hic quibusdam
                                 repellat! Consequuntur recusandae praesentium sit voluptate blanditiis molestiae
                                 autem sequi labore aliquam. Distinctio ex, exercitationem, natus deleniti eum
-                                sit adipisci vero, ipsam eius dicta iusto excepturi consequatur velit aut?
-                                Voluptatum consectetur reiciendis possimus voluptas hic delectus provident
-                                debitis earum nihil, beatae eum ad architecto?</p>
+                                sit adipisci vero</p>
                                 
                                <div class="contact">
                                     <div class="contact2">
@@ -53,12 +60,10 @@
 
                                     <div class="contact2">
                                         <a href="https://linkedin.com/">
-                                            <h2>Download CV</h2>
+                                            <h2>Download CV <i class="fa-solid fa-arrow-down-long"></i></h2>
                                         </a>
                                     </div>
-                                    <div class="contact2">
-                                            <a href="https://linkedin.com/"><img src="assets/images\download.png" alt="download" class="downloadimg"></a>
-                                    </div>
+                                    
                                </div>
 
                     <div class="sosmed">
@@ -79,7 +84,7 @@
                 <div class="container-right">
 
                     <div class="card">
-                        <img src="assets/images/power.jpg" alt="power" style="height: 400px; border-radius: 10px 10px 0 0;">
+                        <img src="assets/images/power.jpg" alt="power">
                         <h2>Isnan Prasetyo</h2>
                         <p>Fullstask Developer</p>
                     </div>
@@ -87,5 +92,8 @@
                 </div>
             </section>
         </div>
-    </body>
+
+        <script src="js/index.js"></script> 
+
+    </body> 
 </html>

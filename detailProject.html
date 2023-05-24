@@ -15,20 +15,29 @@
             <div class="nav-left">
                 <ul>
                     <li>
-                        <img src="assets/images/logo.png" alt="dumbways_logo"/>
+                        <img src="assets/images/logo.png" alt="dumbways_logo" />
                     </li>
-                    <li>
-                        <a href="index.html">Home</a>
+                    <li class="item-collapse">
+                        <a class="active" href="#">Home</a>
                     </li>
-                    <li>
-                        <a class="active" href="myProject.html">My Project</a>
+                    <li class="item-collapse">
+                        <a href="myProject.html">My Project</a>
                     </li>
                 </ul>
             </div>
-            <div class="nav-right">
+            <div class="nav-right item-collapse">
                 <a href="contact.html">Contact me</a>
             </div>
+            <button type="button" class="barsmenu" onclick="openHam()"><i class="fa-2x fa-solid fa-bars"></i></button>
         </nav>
+        
+        <div class="hamburger-container" id="hamburger-container">
+            <a href="index.html">Home</a>
+            <a href="myProject.html"  class="hamburger-active">My Project</a>
+            <div class="hamburger-contact">
+                <a href="contact.html">Contact me</a>
+            </div>
+        </div>
 
         <div class="container1">
             <section>
@@ -127,6 +136,6 @@
             </section>
 
         </div>
-
+        <script src="js/index.js"></script>
     </body>
 </html>

@@ -2,6 +2,9 @@
     <head>
         <title>Contact</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body>
@@ -11,18 +14,27 @@
                 <li>
                     <img src="assets/images/logo.png" alt="dumbways_logo" />
                 </li>
-                <li>
-                    <a class="navbar-home" href="index.html">Home</a>
+                <li class="item-collapse">
+                    <a href="index.html">Home</a>
                 </li>
-                <li>
+                <li class="item-collapse">
                     <a href="myProject.html">My Project</a>
                 </li>
             </ul>
         </div>
-        <div class="nav-right">
+        <div class="nav-right item-collapse">
             <a href="#">Contact me</a>
         </div>
+        <button type="button" class="barsmenu" onclick="openHam()"><i class="fa-2x fa-solid fa-bars"></i></button>
     </nav>
+    
+    <div class="hamburger-container" id="hamburger-container">
+        <a href="index.html" class="hamburger-active">Home</a>
+        <a href="myProject.html">My Project</a>
+        <div class="hamburger-contact">
+            <a href="#">Contact me</a>
+        </div>
+    </div>
     
     <div class="contactform">
         <h1 class="title">GET IN TOUCH</h1>
@@ -56,6 +68,7 @@
             <button class="button-submit" onclick="submitData()">Submit</button>
     </div>
     <script src="js/contact.js"></script>
+    <script src="js/index.js"></script> 
 
     </body>
 </html>
