@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>My Testimonial</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/testimonial.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <li>
+                        <img src="assets/images/logo.png" alt="dumbways_logo" />
+                    </li>
+                    <li class="item-collapse">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="item-collapse">
+                        <a href="myProject.html">My Project</a>
+                    </li>
+                    <li class="item-collapse">
+                        <a class="active" href="#">My Testimonials</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-right item-collapse">
+                <a href="contact.html">Contact me</a>
+            </div>
+            <button type="button" class="barsmenu" onclick="openHam()"><i class="fa-2x fa-solid fa-bars"></i></button>
+        </nav>
+        
+        <div class="hamburger-container" id="hamburger-container">
+            <a href="index.html">Home</a>
+            <a href="myProject.html">My Project</a>
+            <a href="#" class="hamburger-active">my Testimonials</a>
+            <div class="hamburger-contact">
+                <a href="contact.html">Contact me</a>
+            </div>
+        </div>
+
+        <h1 style="text-align: center;">My Testimonials</h1>
+
+        <div class="rating-container">
+            <button onclick="allTesti()">All</button>
+            <button onclick="filterTesti(1)">1 <i class="fa-solid fa-star"></i></button>
+            <button onclick="filterTesti(2)">2 <i class="fa-solid fa-star"></i></button>
+            <button onclick="filterTesti(3)">3 <i class="fa-solid fa-star"></i></button>
+            <button onclick="filterTesti(4)">4 <i class="fa-solid fa-star"></i></button> 
+            <button onclick="filterTesti(5)">5 <i class="fa-solid fa-star"></i></button>
+
+        </div>
+        
+        <div class="testi-container" id="testi-container" >
+            <div class="testi-item">
+                <img class="testi-img" src="assets/images/testi1.jpg" alt="person"> 
+                <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugit!</p>
+                <p class="author">- Lorem, ipsum.</p>
+                <p class="rating">4 <i class="fa-solid fa-star"></i></p>
+            </div>
+
+            <div class="testi-item">
+                <img class="testi-img" src="assets/images/testi2.jpg" alt="person">
+                <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugit!</p>
+                <p class="author">- Lorem, ipsum.</p>
+            </div>
+
+            <div class="testi-item">
+                <img class="testi-img" src="assets/images/testi3.jpg" alt="person">
+                <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugit!</p>
+                <p class="author">- Lorem, ipsum.</p>
+            </div>
+
+            <div class="testi-item">
+                <img class="testi-img" src="assets/images/testi4.jpg" alt="person">
+                <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugit!</p>
+                <p class="author">- Lorem, ipsum.</p>
+            </div>
+            
+        </div>
+
+        <Script src="js/index.js"></Script>
+        <Script src="js/myTestimonial.js"></Script>
+    </body>
+</html>
