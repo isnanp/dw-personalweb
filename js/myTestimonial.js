@@ -88,7 +88,7 @@ const testimonialData = [
         rating : 5,
     },
     {
-        author : "John Wick",
+        author : "Joko Wick",
         quotes : "lumayan lah",
         image : "assets/images/testi2.jpg",
         rating : 4,
