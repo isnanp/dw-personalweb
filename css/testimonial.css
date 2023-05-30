@@ -8,7 +8,8 @@
     color: aliceblue;
     border-radius: 5px;
     font-size: 1.1em; 
-}
+    cursor: pointer;
+}  
 
 .testi-container {
     display: grid;
@@ -20,7 +21,7 @@
 
 .testi-item {
     padding: 1em;
-    width: min-content;
+    width: fit-content;
     border-radius: 5px;
     box-shadow: 0 0 15px #c4c1c1;
 }
@@ -61,7 +62,7 @@
     }
 
     .testi-img {
-        width: 16.5em; 
+        width: 16.4em; 
     }
 
     .testi-item {

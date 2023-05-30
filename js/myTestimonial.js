@@ -154,9 +154,7 @@ allTesti()
 function filterTesti(rating) {
     let testimonialHTML = "";
 
-    let testiFiltered = testimonialData.filter(function (item) {
-        return item.rating === rating;
-    });
+    let testiFiltered = testimonialData.filter(item => item.rating === rating);
 
     if (testiFiltered.length === 0) {
         testimonialHTML += `<h2 style="text-allign:center">404 Data Not Found</h2>`
